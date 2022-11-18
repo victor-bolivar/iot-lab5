@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.storage.StorageReference;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,5 +23,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void logout(View view){
+        FirebaseAuth.getInstance().signOut();
+        finish();
+    }
 
 }
