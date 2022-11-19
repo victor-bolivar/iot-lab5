@@ -21,7 +21,6 @@
             android:layout_marginTop="24dp"
             />
 
-        #Titulo
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edTitulo"
@@ -34,12 +33,12 @@
             android:hint="Título de la actividad">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/intTitulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
-        #Descripción breve
         <com.google.android.material.textfield.TextInputLayout
             android:layout_below="@+id/edTitulo"
             android:id="@+id/edDescripcion"
@@ -50,12 +49,12 @@
             android:hint="Descripción de la actividad">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/intDesc"
                 android:layout_width="match_parent"
                 android:layout_height="88dp"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
-        #fecha
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_below="@+id/edDescripcion"
@@ -63,33 +62,41 @@
 
             android:layout_marginTop="24dp"
             android:layout_marginLeft="30dp"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content">
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+           >
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inpFecha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="date"
-                android:hint="dd/mm/yyyy"
+                android:hint="Fecha"
+                android:focusable="false"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:maxLines="1"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        #hora inicio
         <com.google.android.material.textfield.TextInputLayout
             android:layout_below="@+id/edFecha"
             android:id="@+id/edHoraInicio"
 
             android:layout_marginTop="24dp"
             android:layout_marginLeft="30dp"
-            android:layout_width="136dp"
+            android:layout_width="112dp"
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/intHoraIni"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="time"
-                android:hint="Hora inicio"
+                android:focusable="false"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:hint="Hora Inicio"
                 />
         </com.google.android.material.textfield.TextInputLayout>
         <TextView
@@ -103,24 +110,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        #hora fin
         <com.google.android.material.textfield.TextInputLayout
             android:layout_below="@id/edFecha"
             android:layout_toRightOf="@+id/sep"
             android:id="@+id/edHoraFin"
             android:layout_marginTop="24dp"
             android:layout_marginLeft="16dp"
-            android:layout_width="136dp"
+            android:layout_width="112dp"
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/intHoraFin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="time"
+                android:focusable="false"
+                android:clickable="true"
+                android:cursorVisible="false"
                 android:hint="Hora fin"
                 />
         </com.google.android.material.textfield.TextInputLayout>
-        #imagen
         <TextView
             android:id="@+id/titImg"
             android:layout_width="wrap_content"
@@ -130,34 +138,48 @@
             android:layout_below="@id/edHoraFin"
             android:layout_marginTop="24dp"
             android:textSize="20sp"/>
-        <ImageView
-            android:background="#999999"
-            android:id="@+id/imgView"
-            android:layout_below="@id/titImg"
-            android:layout_marginTop="24dp"
-            android:layout_width="200dp"
+
+        <RelativeLayout
+            android:layout_width="320dp"
             android:layout_height="200dp"
+            android:layout_below="@id/titImg"
             android:layout_centerHorizontal="true"
-            />
-        <Button
-            android:onClick="subirImagen"
-            android:layout_marginTop="8dp"
-            android:id="@+id/buttImagen"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/imgView"
-            android:theme="@style/Theme.Material3.DayNight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Subir Imagen"
-            />
+            android:layout_marginTop="16dp"
+            android:id="@+id/relImg"
+            >
+
+            <ImageView
+                android:id="@+id/imgView"
+                android:layout_marginTop="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:onClick="subirImagen"
+                />
+
+            <TextView
+                android:id="@+id/textImg"
+                android:background="#999999"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:text="Toque para subir imagen"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:onClick="subirImagen"
+                >
+
+            </TextView>
+        </RelativeLayout>
         <Button
             android:id="@+id/buttCrear"
             android:layout_marginTop="16dp"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/buttImagen"
+            android:layout_below="@id/relImg"
             android:theme="@style/Theme.Material3.DayNight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Crear" />
+            android:text="Crear Actividad"
+            android:textSize="14sp"/>
     </RelativeLayout>
 </ScrollView>
