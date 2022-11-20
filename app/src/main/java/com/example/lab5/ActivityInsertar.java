@@ -231,7 +231,7 @@ public class ActivityInsertar extends AppCompatActivity {
                 labelDisponibilidad.get(1).setVisibility(View.VISIBLE);
                 labelDisponibilidad.get(2).setVisibility(View.INVISIBLE);
 
-                Toast.makeText(this, "1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "No se puede agendar el pasado", Toast.LENGTH_SHORT).show();
                 return;
             }
         }
