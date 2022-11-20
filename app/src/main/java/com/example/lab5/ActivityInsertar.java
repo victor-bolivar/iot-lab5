@@ -217,12 +217,15 @@ public class ActivityInsertar extends AppCompatActivity {
 
         List<String> listaConflictos = new ArrayList<>();
 
+
+        Calendar calTemp = Calendar.getInstance();
+
         String myFormat="dd/MM/yyyy";
         SimpleDateFormat dateFormat=new SimpleDateFormat(myFormat, Locale.US);
-        String currentDate = dateFormat.format(myCalendar.getTime());
+        String currentDate = dateFormat.format(calTemp.getTime());
 
         if(currentDate.equals(fecha)){
-            int tempMinutes =  myCalendar.get(Calendar.HOUR_OF_DAY)*60 + myCalendar.get(Calendar.MINUTE);
+            int tempMinutes =  calTemp.get(Calendar.HOUR_OF_DAY)*60 + calTemp.get(Calendar.MINUTE);
             int start = DateSaver.minutesInDay(horaInicio);
             if(start<tempMinutes){
                 disponible = false;
