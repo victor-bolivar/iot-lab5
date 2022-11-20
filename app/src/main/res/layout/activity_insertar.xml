@@ -18,7 +18,7 @@
             android:textStyle="bold"
             android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="8dp"
             />
 
 
@@ -79,6 +79,79 @@
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dispLabel"
+            android:layout_below="@+id/edDescripcion"
+            android:layout_width="140dp"
+            android:layout_height="52dp"
+            android:layout_toEndOf="@id/edFecha"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:text="Sin evaluar"
+
+            android:focusable="false"
+            android:clickable="false"
+            android:visibility="visible"
+
+
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:paddingHorizontal="16dp"
+            app:backgroundTint="#0288d1"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            app:cornerRadius="16dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dispLabelerror"
+            android:layout_below="@+id/edDescripcion"
+            android:layout_width="140dp"
+            android:layout_height="52dp"
+            android:layout_toEndOf="@id/edFecha"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:text="Hay conflictos"
+
+            android:focusable="false"
+            android:clickable="false"
+
+            android:visibility="invisible"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:paddingHorizontal="16dp"
+            app:backgroundTint="#d32f2f"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            app:cornerRadius="16dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dispLabeldisp"
+            android:layout_below="@+id/edDescripcion"
+            android:layout_width="140dp"
+            android:layout_height="52dp"
+            android:layout_toEndOf="@id/edFecha"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:text="Disponible"
+
+            android:focusable="false"
+            android:clickable="false"
+
+
+            android:visibility="invisible"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:paddingHorizontal="16dp"
+            app:backgroundTint="#2e7d32"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            app:cornerRadius="16dp"
+            />
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_below="@+id/edFecha"
@@ -99,6 +172,9 @@
                 android:hint="Hora Inicio"
                 />
         </com.google.android.material.textfield.TextInputLayout>
+
+
+
         <TextView
             android:id="@+id/sep"
             android:text="-"
@@ -172,6 +248,7 @@
             </TextView>
         </RelativeLayout>
         <Button
+            android:onClick="subir"
             android:id="@+id/buttCrear"
             android:layout_marginTop="16dp"
             android:layout_centerHorizontal="true"

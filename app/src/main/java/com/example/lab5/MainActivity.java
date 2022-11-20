@@ -18,6 +18,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void insertar (View view){
+        Intent intent = new Intent(this, ActivityInsertar.class);
+        startActivity(intent);
+
+    }
+
     public void listar (View view){
         Intent intent = new Intent(this,ListarActivity.class);
         startActivity(intent);
