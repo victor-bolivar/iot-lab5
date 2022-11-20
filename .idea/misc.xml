@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/ciclo 2022-2/SERVICIOS Y APLICACIONES PARA IOT/iot-lab5/app/src/main/res/layout/activity_actualizar.xml" value="0.5" />
+        <entry key="..\:/ciclo 2022-2/SERVICIOS Y APLICACIONES PARA IOT/iot-lab5/app/src/main/res/layout/activity_insertar.xml" value="0.36666666666666664" />
+        <entry key="..\:/ciclo 2022-2/SERVICIOS Y APLICACIONES PARA IOT/iot-lab5/app/src/main/res/layout/activity_listar.xml" value="0.36666666666666664" />
+        <entry key="..\:/ciclo 2022-2/SERVICIOS Y APLICACIONES PARA IOT/iot-lab5/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

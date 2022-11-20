@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityInsertar">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="Nueva actividad"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edTitulo"
+            android:layout_marginTop="24dp"
+            android:layout_below="@+id/title"
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:hint="Título de la actividad">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/intTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@+id/edTitulo"
+            android:id="@+id/edDescripcion"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Descripción de la actividad">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/intDesc"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@+id/edDescripcion"
+            android:id="@+id/edFecha"
+
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+           >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inpFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:hint="Fecha"
+                android:focusable="false"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:maxLines="1"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dispLabel"
+            android:layout_below="@+id/edDescripcion"
+            android:layout_width="140dp"
+            android:layout_height="52dp"
+            android:layout_toEndOf="@id/edFecha"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:text="Sin evaluar"
+
+            android:focusable="false"
+            android:clickable="false"
+            android:visibility="visible"
+
+
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:paddingHorizontal="16dp"
+            app:backgroundTint="#0288d1"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            app:cornerRadius="16dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dispLabelerror"
+            android:layout_width="140dp"
+            android:layout_height="52dp"
+            android:layout_below="@+id/edDescripcion"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_toEndOf="@id/edFecha"
+            android:clickable="false"
+
+            android:focusable="false"
+            android:fontFamily="sans-serif"
+
+            android:paddingHorizontal="16dp"
+            android:text="Hay conflictos"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:backgroundTint="#d32f2f"
+            app:cornerRadius="16dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dispLabeldisp"
+            android:layout_width="140dp"
+            android:layout_height="52dp"
+            android:layout_below="@+id/edDescripcion"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_toEndOf="@id/edFecha"
+            android:clickable="false"
+
+            android:focusable="false"
+            android:fontFamily="sans-serif"
+
+
+            android:paddingHorizontal="16dp"
+            android:text="Disponible"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:backgroundTint="#2e7d32"
+            app:cornerRadius="16dp" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@+id/edFecha"
+            android:id="@+id/edHoraInicio"
+
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/intHoraIni"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:hint="Hora Inicio"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <TextView
+            android:id="@+id/sep"
+            android:text="-"
+            android:textSize="24sp"
+            android:layout_below="@id/edFecha"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/edHoraInicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/edFecha"
+            android:layout_toRightOf="@+id/sep"
+            android:id="@+id/edHoraFin"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/intHoraFin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:hint="Hora fin"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/titImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Imagen"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/edHoraFin"
+            android:layout_marginTop="24dp"
+            android:textSize="20sp"/>
+
+        <RelativeLayout
+            android:layout_width="320dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/titImg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:id="@+id/relImg"
+            >
+
+            <ImageView
+                android:id="@+id/imgView"
+                android:layout_marginTop="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:onClick="subirImagen"
+                />
+
+            <TextView
+                android:id="@+id/textImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="#999999"
+                android:gravity="center"
+                android:onClick="subirImagen"
+                android:text="Toque para subir imagen"
+                android:textSize="14sp">
+
+            </TextView>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/buttCrear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relImg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:onClick="subir"
+            android:text="Crear Actividad"
+            android:textSize="14sp"
+            android:theme="@style/Theme.Material3.DayNight" />
+    </RelativeLayout>
+</ScrollView>
