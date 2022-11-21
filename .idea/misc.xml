@@ -3,10 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/ciclo 2022-2/SERVICIOS Y APLICACIONES PARA IOT/iot-lab5/app/src/main/res/layout/activity_actualizar.xml" value="0.5" />
         <entry key="..\:/ciclo 2022-2/SERVICIOS Y APLICACIONES PARA IOT/iot-lab5/app/src/main/res/layout/activity_insertar.xml" value="0.36666666666666664" />
         <entry key="..\:/ciclo 2022-2/SERVICIOS Y APLICACIONES PARA IOT/iot-lab5/app/src/main/res/layout/activity_listar.xml" value="0.36666666666666664" />
         <entry key="..\:/ciclo 2022-2/SERVICIOS Y APLICACIONES PARA IOT/iot-lab5/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+=======
+        <entry key="..\:/Users/Joau_/AndroidStudioProjects/iot-lab5/app/src/main/res/layout/activity_listar.xml" value="0.20153985507246377" />
+        <entry key="..\:/Users/Joau_/AndroidStudioProjects/iot-lab5/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Public/Documents/IOT/iot-lab5/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/victo/Documents/PUCP/appsiot/reallab5/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/victo/Documents/PUCP/appsiot/reallab5/app/src/main/res/layout/activity_main.xml" value="0.15353260869565216" />
+>>>>>>> 00ee03a9fcc0c875326717a5a807be5dec865c54
       </map>
     </option>
   </component>

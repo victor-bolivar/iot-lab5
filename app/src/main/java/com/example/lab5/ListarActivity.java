@@ -1,45 +1,68 @@
 package com.example.lab5;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
-import com.google.android.gms.tasks.OnSuccessListener;
+import com.example.lab5.Entity.Actividad;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.ListResult;
-import com.google.firebase.storage.StorageReference;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 public class ListarActivity extends AppCompatActivity {
 
-    FirebaseStorage storage;
+
+    FirebaseDatabase firebaseDatabase;
+    ArrayList<Actividad> listarActividades = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar);
-        //mDatabase = FirebaseDatabase.getInstance().getReference();
-        storage = FirebaseStorage.getInstance();
-    }
 
-    StorageReference storageReference = storage.getReference();
-    StorageReference fileRef = storageReference.child("files/uid");
-    //private DatabaseReference mDatabase;
-    public void listarAcrchivos(View view){
-        fileRef.listAll().addOnSuccessListener(new OnSuccessListener<ListResult>() {
+        RecyclerView recyclerView = findViewById(R.id.Recycler);
+
+        ListaAdapter adapter = new ListaAdapter();
+        adapter.setContenido(ListarActivity.this);
+        firebaseDatabase = firebaseDatabase.getInstance();
+
+        DatabaseReference databaseReference = firebaseDatabase.getReference().child("actividades");
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onSuccess(ListResult listResult) {
-                int cantidadElementos = listResult.getItems().size();
-                Log.d("infoApp", String.valueOf(cantidadElementos));
-                for (StorageReference item : listResult.getItems()){
-                    Log.d("InfoAppArchivo",item.getName());
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot children : snapshot.getChildren()){
+                    Actividad actividad = children.getValue(Actividad.class);
+                    actividad.setId(snapshot.getKey());
+                    listarActividades.add(actividad);
+                    adapter.setListarActividades(listarActividades);
+                    recyclerView.setAdapter(adapter);
+                    recyclerView.setLayoutManager(new LinearLayoutManager(ListarActivity.this));
                 }
             }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
         });
+
     }
+
+    public void editarActividad(View vi){
+        
+    }
+
+
+
 
 
 }

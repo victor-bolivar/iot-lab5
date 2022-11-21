@@ -41,6 +41,15 @@
             android:exported="true">
 
         </activity>
+        <activity
+            android:name=".ListarActivity"
+            android:exported="true">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+
+        </activity>
     </application>
 
 </manifest>
