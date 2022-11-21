@@ -34,11 +34,11 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:onClick="insertar"
         android:id="@+id/buttonInsertar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
+        android:onClick="insertar"
         android:text="Insertar Actividad"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/buttonList"
@@ -51,9 +51,12 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
         android:onClick="logout"
         android:text="logout"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="261dp" />
+        app:layout_constraintEnd_toEndOf="@+id/buttonInsertar"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/buttonInsertar"
+        app:layout_constraintTop_toBottomOf="@+id/buttonInsertar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

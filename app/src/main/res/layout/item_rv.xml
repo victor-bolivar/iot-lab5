@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/Titulo"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:text="Titulo"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <TextView
+        android:id="@+id/FechaInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha Inicio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <TextView
+        android:id="@+id/FechaFin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha Fin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.837"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <TextView
+        android:id="@+id/HoraInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hora Inicio"
+        app:layout_constraintEnd_toEndOf="@+id/FechaInicio"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/FechaInicio"
+        tools:layout_editor_absoluteY="64dp" />
+
+    <TextView
+        android:id="@+id/HoraFin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hora Fin"
+        app:layout_constraintEnd_toEndOf="@+id/FechaFin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/FechaFin"
+        tools:layout_editor_absoluteY="64dp" />
+
+    <Button
+        android:id="@+id/ImageRecy"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="4dp"
+        android:text="Imagen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Titulo"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="@+id/Titulo"
+        app:layout_constraintTop_toBottomOf="@+id/Titulo"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizar"
+        app:layout_constraintBottom_toBottomOf="@+id/ImageRecy"
+        app:layout_constraintTop_toTopOf="@+id/ImageRecy"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="254dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
