@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.example.lab5.Entity.Actividad;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,23 +21,26 @@ public class ListarActivity extends AppCompatActivity {
 
 
     FirebaseDatabase firebaseDatabase;
+    FirebaseAuth mAuth;
     ArrayList<Actividad> listarActividades = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar);
 
-        RecyclerView recyclerView = findViewById(R.id.Recycler);
+        mAuth= FirebaseAuth.getInstance();
 
+        RecyclerView recyclerView = findViewById(R.id.Recycler);
 
         ListaAdapter adapter = new ListaAdapter();
         adapter.setContenido(ListarActivity.this);
         firebaseDatabase = firebaseDatabase.getInstance();
 
-        DatabaseReference databaseReference = firebaseDatabase.getReference().child("actividades");
+        DatabaseReference databaseReference = firebaseDatabase.getReference();
 
-        databaseReference.addValueEventListener(new ValueEventListener() {
+        databaseReference.child("actividades/" + mAuth.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot children : snapshot.getChildren()){
