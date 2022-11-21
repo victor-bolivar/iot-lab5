@@ -45,7 +45,7 @@ public class ActivityInsertar extends AppCompatActivity {
 
 
     private final int inicio = 360,fin = 1410;
-    private int iniInput = 0, finInput = 0;
+    public int iniInput = 0, finInput = 0;
     private boolean imageSelected=false;
 
     private ImageView imageView;
@@ -80,6 +80,29 @@ public class ActivityInsertar extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         firebaseStorage = FirebaseStorage.getInstance();
         storageReference = firebaseStorage.getReference();
+
+        Intent intent = getIntent();
+        String data = intent.getStringExtra("id_list");
+
+        if (data!= null) {
+            ref.child("actividades/"+mAuth.getUid()+data).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    Actividad actividad = snapshot.getValue(Actividad.class);
+                    inpTitulo.setText(actividad.getTitulo().toString());
+                    inpDescp.setText(actividad.getDescripcion().toString());
+                    inpFecha.setText(actividad.getFecha().toString());
+                    inpHoraIni.setText(actividad.getHoraInicio().toString());
+                    inpHoraFin.setText(actividad.getHoraFin().toString());
+                    Log.d("msg","se obtuvo la data" );
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    Toast.makeText(ActivityInsertar.this, "Error al validar data", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
 
 
         labelDisponibilidad.add(findViewById(R.id.dispLabel));

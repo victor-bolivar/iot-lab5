@@ -3,6 +3,7 @@ package com.example.lab5;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,6 +22,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+import java.util.Calendar;
+
 public class ActualizarActivity extends AppCompatActivity{
 
     ActivityInsertar insertar = new ActivityInsertar();
@@ -33,6 +36,8 @@ public class ActualizarActivity extends AppCompatActivity{
     private FirebaseStorage firebaseStorage;
     private StorageReference storageReference;
 
+    private Calendar myCalendar= Calendar.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +45,8 @@ public class ActualizarActivity extends AppCompatActivity{
 
         Intent intent = getIntent();
         String data = intent.getStringExtra("id_list");
+
+
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         ref = firebaseDatabase.getReference();
@@ -54,33 +61,21 @@ public class ActualizarActivity extends AppCompatActivity{
         inpFin = findViewById(R.id.editTextFin);
 
 
-        ref.child("actividades/"+mAuth.getUid()+data).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Actividad actividad = snapshot.getValue(Actividad.class);
-                inpTitulo.setText(actividad.getTitulo().toString());
-                inpDescrip.setText(actividad.getDescripcion().toString());
-                inpFecha.setText(actividad.getFecha().toString());
-                inpInicio.setText(actividad.getHoraInicio().toString());
-                inpFin.setText(actividad.getHoraFin().toString());
-                Log.d("msg","Actidad : " );
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(ActualizarActivity.this, "Error al validar data", Toast.LENGTH_SHORT).show();
-            }
-        });
 
 
-        
+
+
+
+
 
 
 
     }
 
 
+
     public void actualizarData(View v){
+
 
 
         insertar.subir(v);

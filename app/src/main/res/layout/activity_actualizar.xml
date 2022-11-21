@@ -6,21 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ActualizarActivity">
 
-    <EditText
-        android:id="@+id/editTextFin"
-        android:layout_width="100dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="119dp"
-        android:layout_marginBottom="221dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextInicio"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="106dp"
@@ -129,28 +114,14 @@
         tools:layout_editor_absoluteX="193dp"
         tools:layout_editor_absoluteY="444dp" />
 
-    <EditText
-        android:id="@+id/editTextInicio"
-        android:layout_width="100dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="82dp"
-        android:layout_marginBottom="221dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editTextFin"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="49dp"
-        android:layout_marginTop="25dp"
         android:layout_marginBottom="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextInicio"
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
@@ -158,14 +129,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="53dp"
-        android:layout_marginTop="124dp"
         android:layout_marginEnd="29dp"
         android:layout_marginBottom="48dp"
         android:onClick="actualizarData"
         android:text="Actualizar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toBottomOf="@+id/editTextFin" />
+        app:layout_constraintStart_toEndOf="@+id/imageButton" />
+
+    <EditText
+        android:id="@+id/editTextInicio"
+        android:layout_width="98dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="33dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/editTextFin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/editTextFin"
+        android:layout_width="105dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextInicio"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
