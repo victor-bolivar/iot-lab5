@@ -57,14 +57,14 @@ public class ListaAdapter extends RecyclerView.Adapter<ListaAdapter.ActividadVie
         Actividad acti = listarActividades.get(position);
         holder.actividad=acti;
         TextView textViewTitulo=holder.itemView.findViewById(R.id.Titulo);
-        //TextView textViewFechaInicio=holder.itemView.findViewById(R.id.FechaFin);
-        TextView textViewFechaFin=holder.itemView.findViewById(R.id.FechaInicio);
+        TextView textViewFechaInicio=holder.itemView.findViewById(R.id.FechaInicio);
+        //TextView textViewFechaFin=holder.itemView.findViewById(R.id.FechaFin);
         TextView textViewHoraInicio=holder.itemView.findViewById(R.id.HoraInicio);
         TextView textViewHoraFin=holder.itemView.findViewById(R.id.HoraFin);
 
         textViewTitulo.setText(acti.getTitulo());
-        textViewFechaFin.setText(acti.getFecha());
-        //textViewFechaInicio.setText(acti.);
+        //textViewFechaFin.setText(acti.getFecha());
+        textViewFechaInicio.setText(acti.getFecha());
         textViewHoraInicio.setText(acti.getHoraInicio());
         textViewHoraFin.setText(acti.getHoraFin());
     }

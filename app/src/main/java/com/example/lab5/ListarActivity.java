@@ -29,6 +29,7 @@ public class ListarActivity extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.Recycler);
 
+
         ListaAdapter adapter = new ListaAdapter();
         adapter.setContenido(ListarActivity.this);
         firebaseDatabase = firebaseDatabase.getInstance();
