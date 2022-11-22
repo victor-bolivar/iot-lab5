@@ -13,10 +13,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.356" />
+        app:layout_constraintVertical_bias="0.248" />
 
     <TextView
         android:id="@+id/FechaInicio"
@@ -25,52 +25,42 @@
         android:text="Fecha Inicio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042" />
-
-    <TextView
-        android:id="@+id/FechaFin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fecha Fin"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.837"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042" />
+        app:layout_constraintVertical_bias="0.263" />
 
     <TextView
         android:id="@+id/HoraInicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:text="Hora Inicio"
-        app:layout_constraintEnd_toEndOf="@+id/FechaInicio"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/FechaInicio"
-        app:layout_constraintTop_toBottomOf="@+id/FechaInicio" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.837"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.229" />
 
     <TextView
         android:id="@+id/HoraFin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_width="69dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="20dp"
         android:text="Hora Fin"
-        app:layout_constraintEnd_toEndOf="@+id/FechaFin"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/FechaFin"
-        app:layout_constraintTop_toBottomOf="@+id/FechaFin" />
+        app:layout_constraintEnd_toEndOf="@+id/HoraInicio"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/HoraInicio"
+        app:layout_constraintTop_toBottomOf="@+id/HoraInicio" />
 
     <Button
-        android:id="@+id/ImageRecy"
+        android:id="@+id/btnDetalles"
         android:layout_width="114dp"
         android:layout_height="51dp"
         android:layout_marginTop="48dp"
         android:layout_marginBottom="4dp"
-        android:text="Imagen"
+        android:onClick="IrImagen"
+        android:text="Detalles"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/Titulo"
         app:layout_constraintHorizontal_bias="0.45"
@@ -79,14 +69,14 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/update"
+        android:id="@+id/delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:text="Actualizar"
-        app:layout_constraintBottom_toBottomOf="@+id/ImageRecy"
+        android:text="Eliminar"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDetalles"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ImageRecy"
-        app:layout_constraintTop_toTopOf="@+id/ImageRecy"
+        app:layout_constraintStart_toEndOf="@+id/btnDetalles"
+        app:layout_constraintTop_toTopOf="@+id/btnDetalles"
         app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

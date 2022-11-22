@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.lab5.Entity.Actividad;
 import com.google.firebase.auth.FirebaseAuth;
@@ -58,6 +60,11 @@ public class ListarActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void IrImagen(View view){
+        Intent intent = new Intent(this, Imagen_Activity.class);
+        startActivity(intent);
     }
 
 
